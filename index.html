@@ -63,7 +63,17 @@
       background: linear-gradient(135deg, #0f172a, #1e3a8a);
       color: white;
       text-align: center;
-      padding: 110px 20px;
+      padding: 90px 20px;
+    }
+
+    .profile-photo {
+      width: 170px;
+      height: 170px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 5px solid white;
+      margin-bottom: 25px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.25);
     }
 
     .hero h1 {
@@ -211,6 +221,11 @@
       .hero h2 {
         font-size: 20px;
       }
+
+      .profile-photo {
+        width: 140px;
+        height: 140px;
+      }
     }
   </style>
 </head>
@@ -233,6 +248,11 @@
 </header>
 
 <section class="hero">
+
+  <img src="Profile.jpeg"
+       alt="Mohamoud Aden Jama"
+       class="profile-photo">
+
   <h1>Mohamoud Aden Jama</h1>
 
   <h2>Accounting & Finance Professional | Lecturer | Researcher</h2>
@@ -247,6 +267,7 @@
     <a class="btn" href="#research">View Research</a>
     <a class="btn" href="#contact">Contact Me</a>
   </div>
+
 </section>
 
 <section id="about">
