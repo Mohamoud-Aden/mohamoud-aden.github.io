@@ -3,10 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <meta name="description" content="Official academic and professional website of Mohamoud Aden Jama">
+  <meta name="author" content="Mohamoud Aden Jama">
+
   <title>Mohamoud Aden Jama | Accounting & Finance</title>
 
   <style>
+
+    /* =========================
+       GENERAL
+    ========================= */
+
     * {
       margin: 0;
       padding: 0;
@@ -17,17 +25,26 @@
     body {
       font-family: Arial, Helvetica, sans-serif;
       line-height: 1.7;
-      color: #1f2937;
+      color: #334155;
       background: #f8fafc;
     }
 
+    a {
+      text-decoration: none;
+    }
+
+    /* =========================
+       NAVIGATION
+    ========================= */
+
     header {
-      background: #0f172a;
+      background: rgba(15, 23, 42, 0.97);
       color: white;
-      padding: 20px 8%;
+      padding: 18px 7%;
       position: sticky;
       top: 0;
       z-index: 1000;
+      box-shadow: 0 3px 15px rgba(0,0,0,0.15);
     }
 
     nav {
@@ -39,8 +56,10 @@
     }
 
     .logo {
-      font-size: 22px;
+      font-size: 21px;
       font-weight: bold;
+      color: #ffffff;
+      letter-spacing: 0.3px;
     }
 
     nav ul {
@@ -50,159 +69,345 @@
     }
 
     nav a {
-      color: white;
-      text-decoration: none;
-      font-size: 15px;
+      color: #e2e8f0;
+      font-size: 14px;
+      font-weight: 600;
+      transition: 0.3s;
     }
 
     nav a:hover {
       color: #38bdf8;
     }
 
+    /* =========================
+       HERO
+    ========================= */
+
     .hero {
-      background: linear-gradient(135deg, #0f172a, #1e3a8a);
+      background:
+        radial-gradient(circle at top right, rgba(56,189,248,0.18), transparent 30%),
+        linear-gradient(135deg, #0f172a 0%, #172554 55%, #1e3a8a 100%);
       color: white;
       text-align: center;
-      padding: 90px 20px;
+      padding: 100px 20px 110px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      width: 100%;
+      height: 45px;
+      background: #f8fafc;
+      clip-path: polygon(0 100%, 100% 100%, 100% 45%, 75% 75%, 50% 45%, 25% 75%, 0 45%);
     }
 
     .profile-photo {
-      width: 170px;
-      height: 170px;
+      width: 175px;
+      height: 175px;
       object-fit: cover;
       border-radius: 50%;
-      border: 5px solid white;
+      border: 5px solid #38bdf8;
+      padding: 3px;
+      background: #0f172a;
       margin-bottom: 25px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.25);
+      box-shadow:
+        0 0 0 8px rgba(56,189,248,0.08),
+        0 15px 35px rgba(0,0,0,0.35);
     }
 
     .hero h1 {
       font-size: 48px;
-      margin-bottom: 15px;
+      margin-bottom: 12px;
+      font-weight: 800;
+      letter-spacing: -1px;
     }
 
     .hero h2 {
-      font-size: 24px;
-      font-weight: normal;
-      color: #bae6fd;
-      margin-bottom: 20px;
+      font-size: 22px;
+      font-weight: 400;
+      color: #7dd3fc;
+      margin-bottom: 22px;
     }
 
     .hero p {
-      max-width: 750px;
+      max-width: 780px;
       margin: auto;
       font-size: 17px;
+      color: #e2e8f0;
     }
 
     .buttons {
-      margin-top: 30px;
+      margin-top: 32px;
     }
 
     .btn {
       display: inline-block;
-      padding: 12px 24px;
+      padding: 12px 25px;
       margin: 5px;
-      border-radius: 6px;
-      text-decoration: none;
+      border-radius: 7px;
       font-weight: bold;
+      background: #38bdf8;
+      color: #0f172a;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 15px rgba(56,189,248,0.18);
+    }
+
+    .btn:hover {
+      background: #7dd3fc;
+      transform: translateY(-3px);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: white;
+      border: 1px solid #38bdf8;
+      box-shadow: none;
+    }
+
+    .btn-outline:hover {
       background: #38bdf8;
       color: #0f172a;
     }
 
-    .btn:hover {
-      background: white;
-    }
+    /* =========================
+       SECTIONS
+    ========================= */
 
     section {
-      max-width: 1100px;
+      max-width: 1150px;
       margin: auto;
-      padding: 75px 25px;
+      padding: 80px 25px;
     }
 
     section h2 {
       text-align: center;
       font-size: 32px;
-      margin-bottom: 35px;
+      margin-bottom: 45px;
       color: #0f172a;
+      position: relative;
     }
 
+    section h2::after {
+      content: "";
+      display: block;
+      width: 55px;
+      height: 4px;
+      background: #38bdf8;
+      border-radius: 10px;
+      margin: 12px auto 0;
+    }
+
+    /* =========================
+       ABOUT
+    ========================= */
+
     .about {
-      text-align: center;
       max-width: 850px;
       margin: auto;
+      text-align: center;
       font-size: 17px;
+      color: #475569;
     }
+
+    .about p {
+      margin-bottom: 18px;
+    }
+
+    /* =========================
+       CARDS
+    ========================= */
 
     .cards {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 22px;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
     }
 
     .card {
       background: white;
-      padding: 25px;
-      border-radius: 10px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+      padding: 30px;
+      border-radius: 14px;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 8px 25px rgba(15,23,42,0.06);
+      transition: all 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-7px);
+      box-shadow: 0 15px 35px rgba(15,23,42,0.11);
+      border-color: #bae6fd;
     }
 
     .card h3 {
       color: #1e3a8a;
       margin-bottom: 12px;
+      font-size: 20px;
+    }
+
+    .card p {
+      color: #64748b;
     }
 
     .card ul {
       padding-left: 20px;
+      color: #64748b;
     }
 
+    .card li {
+      margin-bottom: 7px;
+    }
+
+    /* =========================
+       EDUCATION
+    ========================= */
+
+    #education {
+      background: #f1f5f9;
+      max-width: none;
+      padding-left: 8%;
+      padding-right: 8%;
+    }
+
+    #education .cards {
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    /* =========================
+       EXPERIENCE
+    ========================= */
+
+    /* =========================
+       RESEARCH
+    ========================= */
+
+    .research-icon {
+      font-size: 30px;
+      margin-bottom: 10px;
+    }
+
+    /* =========================
+       PUBLICATION
+    ========================= */
+
     .publication {
+      max-width: 950px;
+      margin: auto;
       background: white;
-      padding: 30px;
-      border-left: 5px solid #2563eb;
-      border-radius: 8px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+      padding: 35px;
+      border-left: 5px solid #38bdf8;
+      border-radius: 12px;
+      box-shadow: 0 8px 25px rgba(15,23,42,0.07);
     }
 
     .publication h3 {
       color: #1e3a8a;
-      margin-bottom: 12px;
+      margin-bottom: 18px;
+      font-size: 21px;
+      line-height: 1.5;
+    }
+
+    .publication p {
+      color: #64748b;
+      margin-bottom: 8px;
+    }
+
+    .doi {
+      color: #2563eb;
+      font-weight: bold;
+    }
+
+    /* =========================
+       ACADEMIC PROFILES
+    ========================= */
+
+    #profiles {
+      background: #f1f5f9;
+      max-width: none;
+      padding-left: 8%;
+      padding-right: 8%;
     }
 
     .links {
       text-align: center;
+      max-width: 900px;
+      margin: auto;
     }
 
     .links a {
       display: inline-block;
       margin: 8px;
-      padding: 12px 18px;
-      background: #e2e8f0;
-      color: #0f172a;
-      text-decoration: none;
-      border-radius: 6px;
+      padding: 13px 20px;
+      background: white;
+      color: #1e3a8a;
+      border: 1px solid #dbeafe;
+      border-radius: 8px;
       font-weight: bold;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(15,23,42,0.05);
     }
 
     .links a:hover {
       background: #38bdf8;
+      color: #0f172a;
+      transform: translateY(-3px);
     }
+
+    /* =========================
+       CONTACT
+    ========================= */
 
     .contact {
       text-align: center;
+      max-width: 800px;
+      margin: auto;
     }
+
+    .contact p {
+      margin-bottom: 10px;
+      color: #64748b;
+    }
+
+    .contact-name {
+      font-size: 22px;
+      font-weight: bold;
+      color: #0f172a !important;
+    }
+
+    .contact-email {
+      color: #2563eb !important;
+      font-weight: bold;
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
 
     footer {
       background: #0f172a;
-      color: white;
+      color: #cbd5e1;
       text-align: center;
-      padding: 30px 20px;
+      padding: 35px 20px;
     }
 
     footer p {
       margin: 5px;
     }
 
-    @media (max-width: 700px) {
+    footer strong {
+      color: white;
+    }
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 800px) {
+
       nav {
         flex-direction: column;
         gap: 15px;
@@ -211,30 +416,90 @@
       nav ul {
         flex-wrap: wrap;
         justify-content: center;
-        gap: 12px;
+        gap: 13px;
+      }
+
+      .hero {
+        padding: 75px 20px 90px;
       }
 
       .hero h1 {
-        font-size: 34px;
+        font-size: 36px;
       }
 
       .hero h2 {
-        font-size: 20px;
+        font-size: 19px;
+      }
+
+      .hero p {
+        font-size: 16px;
       }
 
       .profile-photo {
-        width: 140px;
-        height: 140px;
+        width: 150px;
+        height: 150px;
       }
+
+      section {
+        padding: 65px 20px;
+      }
+
+      section h2 {
+        font-size: 28px;
+      }
+
+      .publication {
+        padding: 25px;
+      }
+
     }
+
+    @media (max-width: 500px) {
+
+      .logo {
+        font-size: 18px;
+      }
+
+      nav a {
+        font-size: 13px;
+      }
+
+      .hero h1 {
+        font-size: 31px;
+      }
+
+      .hero h2 {
+        font-size: 17px;
+      }
+
+      .profile-photo {
+        width: 135px;
+        height: 135px;
+      }
+
+      .btn {
+        width: 85%;
+        margin: 6px auto;
+      }
+
+    }
+
   </style>
 </head>
 
 <body>
 
+<!-- =========================
+     NAVIGATION
+========================= -->
+
 <header>
+
   <nav>
-    <div class="logo">Mohamoud Aden Jama</div>
+
+    <div class="logo">
+      Mohamoud Aden Jama
+    </div>
 
     <ul>
       <li><a href="#about">About</a></li>
@@ -242,45 +507,68 @@
       <li><a href="#experience">Experience</a></li>
       <li><a href="#research">Research</a></li>
       <li><a href="#publications">Publications</a></li>
+      <li><a href="#profiles">Profiles</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
+
   </nav>
+
 </header>
+
+
+<!-- =========================
+     HERO
+========================= -->
 
 <section class="hero">
 
-  <img src="Profile.jpeg"
-       alt="Mohamoud Aden Jama"
-       class="profile-photo">
+  <img
+    src="Profile.jpeg"
+    alt="Mohamoud Aden Jama"
+    class="profile-photo"
+  >
 
   <h1>Mohamoud Aden Jama</h1>
 
-  <h2>Accounting & Finance Professional | Lecturer | Researcher</h2>
+  <h2>
+    Accounting & Finance Professional | Lecturer | Researcher
+  </h2>
 
   <p>
     Academic, lecturer, and researcher specializing in Accounting and Finance,
     Accounting Information Systems, financial performance, SME finance,
-    financial reporting, auditing, and financial management.
+    financial reporting, auditing, taxation, and financial management.
   </p>
 
   <div class="buttons">
-    <a class="btn" href="#research">View Research</a>
-    <a class="btn" href="#contact">Contact Me</a>
+
+    <a class="btn" href="#research">
+      View Research
+    </a>
+
+    <a class="btn btn-outline" href="#contact">
+      Contact Me
+    </a>
+
   </div>
 
 </section>
 
+
+<!-- =========================
+     ABOUT
+========================= -->
+
 <section id="about">
+
   <h2>About Me</h2>
 
   <div class="about">
-    <p>
-      I am Mohamoud Aden Jama, an Accounting and Finance professional,
-      lecturer, and researcher based in Erigavo, Somaliland. I hold a
-      Bachelor's Degree and a Master's Degree in Accounting and Finance.
-    </p>
 
-    <br>
+    <p>
+      I am <strong>Mohamoud Aden Jama</strong>, an Accounting and Finance
+      professional, lecturer, and researcher based in Erigavo, Somaliland.
+    </p>
 
     <p>
       My academic and professional interests include Accounting Information
@@ -288,111 +576,209 @@
       auditing, taxation, budgeting, cash management, and financial management.
     </p>
 
-    <br>
-
     <p>
       I am interested in research that contributes to improved financial
-      practices, economic growth, innovation, and sustainable development.
+      practices, economic growth, innovation, accountability, and sustainable
+      development.
     </p>
+
   </div>
+
 </section>
 
+
+<!-- =========================
+     EDUCATION
+========================= -->
+
 <section id="education">
+
   <h2>Education</h2>
 
   <div class="cards">
 
     <div class="card">
+
       <h3>Master's Degree</h3>
-      <p><strong>Accounting and Finance</strong></p>
-      <p>Gollis University</p>
+
+      <p>
+        <strong>Accounting and Finance</strong>
+      </p>
+
+      <p>
+        Gollis University
+      </p>
+
     </div>
 
+
     <div class="card">
+
       <h3>Bachelor's Degree</h3>
-      <p><strong>Accounting and Finance</strong></p>
-      <p>Sanaag University</p>
+
+      <p>
+        <strong>Accounting and Finance</strong>
+      </p>
+
+      <p>
+        Sanaag University
+      </p>
+
     </div>
 
+
     <div class="card">
+
       <h3>Professional Training</h3>
+
       <ul>
         <li>Auditing Training</li>
         <li>Financial Analysis Training</li>
         <li>Public Financial Management Training</li>
       </ul>
+
     </div>
 
   </div>
+
 </section>
 
+
+<!-- =========================
+     EXPERIENCE
+========================= -->
+
 <section id="experience">
+
   <h2>Professional Experience</h2>
 
   <div class="cards">
 
     <div class="card">
+
       <h3>Lecturer – Accounting & Finance</h3>
-      <p><strong>Sanaag University</strong></p>
-      <p>Erigavo, Somaliland</p>
+
+      <p>
+        <strong>Sanaag University</strong>
+      </p>
+
+      <p>
+        Erigavo, Somaliland
+      </p>
+
     </div>
 
+
     <div class="card">
+
       <h3>Finance Officer</h3>
-      <p><strong>Sanaag Social Work Organization (SSWO)</strong></p>
-      <p>NGO Finance and Financial Management</p>
+
+      <p>
+        <strong>Sanaag Social Work Organization (SSWO)</strong>
+      </p>
+
+      <p>
+        NGO Finance and Financial Management
+      </p>
+
     </div>
 
+
     <div class="card">
+
       <h3>Accountant</h3>
-      <p><strong>British College</strong></p>
-      <p>Erigavo, Somaliland</p>
+
+      <p>
+        <strong>British College</strong>
+      </p>
+
+      <p>
+        Erigavo, Somaliland
+      </p>
+
     </div>
 
   </div>
+
 </section>
 
+
+<!-- =========================
+     RESEARCH
+========================= -->
+
 <section id="research">
+
   <h2>Research Interests</h2>
 
   <div class="cards">
 
     <div class="card">
+
+      <div class="research-icon">📊</div>
+
       <h3>Accounting Information Systems</h3>
+
       <p>
         The use of computerized accounting and information systems
         to improve business financial management and performance.
       </p>
+
     </div>
 
+
     <div class="card">
+
+      <div class="research-icon">💼</div>
+
       <h3>SME Finance</h3>
+
       <p>
         Financial practices, financial performance, budgeting,
         reporting, and cash management among SMEs.
       </p>
+
     </div>
 
+
     <div class="card">
+
+      <div class="research-icon">📑</div>
+
       <h3>Auditing & Financial Reporting</h3>
+
       <p>
         Auditing practices, financial reporting quality,
         accountability, and financial decision-making.
       </p>
+
     </div>
 
+
     <div class="card">
+
+      <div class="research-icon">💰</div>
+
       <h3>Taxation & Public Finance</h3>
+
       <p>
         Tax administration, tax compliance, domestic revenue
         mobilization, and public financial management.
       </p>
+
     </div>
 
   </div>
+
 </section>
 
+
+<!-- =========================
+     PUBLICATION
+========================= -->
+
 <section id="publications">
+
   <h2>Publication</h2>
 
   <div class="publication">
@@ -404,7 +790,8 @@
     </h3>
 
     <p>
-      <strong>Author:</strong> Mohamoud Aden Jama
+      <strong>Author:</strong>
+      Mohamoud Aden Jama
     </p>
 
     <p>
@@ -414,50 +801,86 @@
 
     <p>
       <strong>DOI:</strong>
-      10.46281/ijsmes.v9i1.2953
+      <span class="doi">
+        10.46281/ijsmes.v9i1.2953
+      </span>
     </p>
 
     <br>
 
-    <a class="btn"
-       href="https://doi.org/10.46281/ijsmes.v9i1.2953"
-       target="_blank">
-       View Publication
+    <a
+      class="btn"
+      href="https://doi.org/10.46281/ijsmes.v9i1.2953"
+      target="_blank"
+    >
+      View Publication
     </a>
 
   </div>
+
 </section>
 
-<section>
+
+<!-- =========================
+     ACADEMIC PROFILES
+========================= -->
+
+<section id="profiles">
+
   <h2>Academic Profiles</h2>
 
   <div class="links">
 
-    <a href="https://orcid.org/" target="_blank">ORCID</a>
+    <a
+      href="https://orcid.org/"
+      target="_blank"
+    >
+      ORCID
+    </a>
 
-    <a href="https://www.researchgate.net/" target="_blank">
+    <a
+      href="https://www.researchgate.net/"
+      target="_blank"
+    >
       ResearchGate
     </a>
 
-    <a href="https://www.academia.edu/" target="_blank">
+    <a
+      href="https://www.academia.edu/"
+      target="_blank"
+    >
       Academia.edu
     </a>
 
-    <a href="https://zenodo.org/" target="_blank">
+    <a
+      href="https://zenodo.org/"
+      target="_blank"
+    >
       Zenodo
     </a>
 
-    <a href="https://scholar.google.com/" target="_blank">
+    <a
+      href="https://scholar.google.com/"
+      target="_blank"
+    >
       Google Scholar
     </a>
 
   </div>
+
 </section>
 
+
+<!-- =========================
+     CONTACT
+========================= -->
+
 <section id="contact">
+
   <h2>Contact</h2>
 
   <div class="contact">
+
     <p>
       For academic collaboration, research, teaching, and professional
       opportunities, please get in touch.
@@ -465,16 +888,39 @@
 
     <br>
 
-    <p><strong>Mohamoud Aden Jama</strong></p>
-    <p>Accounting & Finance | Lecturer | Researcher</p>
-    <p>Erigavo, Somaliland</p>
+    <p class="contact-name">
+      Mohamoud Aden Jama
+    </p>
+
+    <p>
+      Accounting & Finance | Lecturer | Researcher
+    </p>
+
+    <p>
+      Erigavo, Somaliland
+    </p>
+
   </div>
+
 </section>
 
+
+<!-- =========================
+     FOOTER
+========================= -->
+
 <footer>
-  <p>© 2026 Mohamoud Aden Jama. All Rights Reserved.</p>
-  <p>Academic & Professional Website</p>
+
+  <p>
+    © 2026 <strong>Mohamoud Aden Jama</strong>. All Rights Reserved.
+  </p>
+
+  <p>
+    Academic & Professional Website
+  </p>
+
 </footer>
+
 
 </body>
 </html>
